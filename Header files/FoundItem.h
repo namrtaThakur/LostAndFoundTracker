@@ -3,11 +3,11 @@
 #include "Item.h"
 #include <iostream>
 using namespace std;
-class Foundtem :public Item{
+class FoundItem :public Item{
 private:
 string foundDate;
 public:
-Founditem(string n, string loc, string date ="");
+FoundItem(string n, string loc, string date ="");
 void display() override;
 };
 #endif
