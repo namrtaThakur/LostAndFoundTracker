@@ -28,6 +28,9 @@ void Tracker:: displayAll()
 }
 
 Tracker::~Tracker(){
-
+for(int i=0; i< count; i++)
+{
+    delete items[i];
+}
 
 }
