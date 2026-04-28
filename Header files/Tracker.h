@@ -9,6 +9,7 @@ int count;
 public: 
 Tracker();
 void addItem(Item* item);
+void displayAll() const;
 ~Tracker();
 };
 #endif
