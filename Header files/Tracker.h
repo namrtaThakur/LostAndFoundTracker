@@ -10,6 +10,7 @@ public:
 Tracker();
 void addItem(Item* item);
 void displayAll() const;
+void findMatches() const;
 ~Tracker();
 };
 #endif
