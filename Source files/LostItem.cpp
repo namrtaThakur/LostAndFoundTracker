@@ -1,9 +1,16 @@
 #include "LostItem.h"
-LostItem::LostItem(string n, string loc, string date): Item(n,loc),lostDate(date){}
+using namespace std;
 
-void LostItem:: display()
-{ cout<< "Lost Item:"<<name<<",Location:"<<location;
+LostItem::LostItem(string n, string loc, string date)
+: Item(n,loc),lostDate(date){}
+
+void LostItem:: display() const
+{
+     cout<< "Lost Item:"<<name<<",Location:"<<location;
 if(!lostDate.empty())
 cout<<",Date:"<< lostDate;
 cout<<endl;
+}
+string LostItem::getLostDate() const{  
+    return lostDate;
 }
