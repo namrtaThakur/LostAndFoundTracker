@@ -7,11 +7,17 @@ using namespace std;
 class Item
 {
 protected:
-string name;
-string location;
+std::string name;
+std::string location;
 
 public:
-Item (string n, string loc);
-virtual void display()=0;
-virtual ~Item() {};
+Item (std::string n,std:: string loc);
+
+virtual void display() const=0;
+
+std::string getName() const;
+std::string getLocation() const;
+
+virtual ~Item() = default;
 };
+#endif
