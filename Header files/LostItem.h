@@ -1,14 +1,19 @@
 #ifndef LOSTITEM_H
 #define LOSTITEM_H
+
 #include "Item.h"
+#include<string>
 #include <iostream>
-using namespace std;
+
 class LostItem : public Item {
     private:
-    string lostDate;
+   std:: string lostDate;
 
     public:
-    LostItem(string n,string loc,string date ="");
-     void display() override;
+    LostItem( std::string n,std::string loc,std::string date ="");
+     void display() const override;
+
+     std:: string getLostDate() const;
 };
 
+#endif
