@@ -1,13 +1,20 @@
 #ifndef FOUNDITEM H
 #define FOUNDITEM H
+
 #include "Item.h"
+#include<string>
+
 #include <iostream>
-using namespace std;
+
+
 class FoundItem :public Item{
 private:
-string foundDate;
+std::string foundDate;
+
 public:
-FoundItem(string n, string loc, string date ="");
-void display() override;
+FoundItem(std::string n, std::string loc, std::string date ="");
+void display() const override;
+
+std:: string getFoundDate() const;
 };
 #endif
