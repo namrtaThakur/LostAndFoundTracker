@@ -1,4 +1,4 @@
-#include "../Header files/Tracker.h"
+#include "Tracker.h"
 #include "LostItem.h"
 #include "FoundItem.h"
 #include <iostream>
@@ -7,7 +7,7 @@ Tracker::Tracker() {
     count = 0;
 
 }
-void Tracker :: add Item(Item* item)
+void Tracker :: addItem(Item* item)
 {
     if(count <100)
     {
@@ -18,16 +18,17 @@ void Tracker :: add Item(Item* item)
     }
 }
 
-void Tracker:: displayAll()
+void Tracker:: displayAll()const
 {
     cout<<"\nAll Items\n";
     for(int i=0; i<count ; i++)
     {
-        items[i]=display();
+        items[i]->display();
     }
 }
 void Tracker::findMatches()const{
     cout<<"\n Matching items\n";
+
     for(int i=0; i<count;i++){
     LostItem*lost = dynamic_cast<LostItem*>(items[i]);
     if(lost !=nullptr){
@@ -35,9 +36,12 @@ void Tracker::findMatches()const{
         {FoundItem* found = dynamic_cast<FoundItem*>(items[j]);
          
         if (found !=nullptr)
-    {if(lost->getName() == found ->getName() &&
+    {
+        if(lost->getName() == found ->getName() &&
     lost->getLocation()==found->getLocation())
-{cout<<"\nMatch found";
+
+{
+    cout<<"\nMatch found";
 lost->display();
 found->display();
 }
@@ -46,7 +50,8 @@ found->display();
     }
 }
 }
-~Tracker(){
+
+Tracker::~Tracker(){
 for(int i=0; i< count; i++)
 {
     delete items[i];
