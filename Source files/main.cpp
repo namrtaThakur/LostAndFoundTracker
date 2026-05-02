@@ -67,6 +67,7 @@
             
         }
         else if(choice ==7){
+            cout << "Exiting the program. Goodbye!\n";
 
         }
         return 0;
