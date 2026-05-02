@@ -14,7 +14,7 @@ Tracker();
 void addItem(Item* item);
 void displayAll() const;
 void findMatches() const;
-template<typenameT>
+template <typename T>
 void searchByName(T key)const;
 ~Tracker();
 };
