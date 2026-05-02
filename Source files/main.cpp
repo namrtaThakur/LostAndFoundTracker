@@ -18,6 +18,7 @@
         cout << 4.Find Matches\n";
         cout << "5.Search by name (Template)\n";
         cout <<  "6. Exit\n";
-        cout << "Enter your Choice: ";"
+        cout << "Enter your Choice:";
+        cin >> choice;
     }
-  }
+  } 
