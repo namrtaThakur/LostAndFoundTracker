@@ -1,5 +1,5 @@
 #include "FoundItem.h"
-using namespac std;
+using namespace std;
 
 FoundItem::FoundItem(string n, string loc, string date)
  :Item(n, loc),foundDate(date){}
