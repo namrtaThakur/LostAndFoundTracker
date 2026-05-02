@@ -20,5 +20,34 @@
         cout <<  "6. Exit\n";
         cout << "Enter your Choice:";
         cin >> choice;
-    }
-  } 
+
+        if(choice ==1){
+            string name,location, date;
+            cout << "Enter item name:";
+            cin >> name;
+            cout << "Enter location:";
+            cin >> location;
+            cout << "Enter Lost date:";
+            cin >> date;"
+
+
+            tracker.addItem(new LostItem(name, location, date));
+        } 
+        else if(choice == 2){
+    
+        }
+        else if(choice == 3){
+            
+        }
+        else if(choice == 4){
+        
+        }
+        else if(choice == 5){
+        
+        }
+        else if(choice != 6){
+            
+            return 0;
+        }
+        
+    } 
