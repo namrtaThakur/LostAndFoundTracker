@@ -9,14 +9,21 @@ class Item
 protected:
 std::string name;
 std::string location;
+std::string imagePath;
 
 public:
-Item (std::string n,std:: string loc);
+Item (std::string n,std::string loc, std::string imgPath = "");
 
 virtual void display() const=0;
 
 std::string getName() const;
 std::string getLocation() const;
+
+void setImagePath(const std::string& path);
+std::string getImagePath()const;
+bool hasImage() const; 
+
+void openImage() const;
 
 virtual ~Item() = default;
 };
