@@ -10,7 +10,9 @@ class LostItem : public Item {
    std:: string lostDate;
 
     public:
-    LostItem( std::string n,std::string loc,std::string date ="");
+    LostItem( std::string n,std::string loc,std::string date ="",std::string
+        imgPath="");
+        
      void display() const override;
 
      std:: string getLostDate() const;
