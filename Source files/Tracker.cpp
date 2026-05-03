@@ -26,30 +26,37 @@ void Tracker:: displayAll()const
         items[i]->display();
     }
 }
-void Tracker::findMatches()const{
+void Tracker::findMatches(const LostItem& lost)const{
     cout<<"\n Matching items\n";
 
-    for(int i=0; i<count;i++){
-    LostItem*lost = dynamic_cast<LostItem*>(items[i]);
-    if(lost !=nullptr){
-        for(int j=0; j<count; j++)
-        {FoundItem* found = dynamic_cast<FoundItem*>(items[j]);
-         
-        if (found !=nullptr)
+    for(int i=0; i<count;i++)
     {
-        if(lost->getName() == found ->getName() &&
-    lost->getLocation()==found->getLocation())
+    FoundItem* found = dynamic_cast<FoundItem*>(items[i]);
+    if(found !=nullptr)
+    {
+        if (lost.getName() == found->getName() && lost.getLocation() == found->getLocation())
+        {
+            cout<< "\nMatch Found\n";
+            lost.display();
+            found->display();
 
-{
-    cout<<"\nMatch found";
-lost->display();
-found->display();
-}
-}
-}
+            if(found->hasImage())
+            {
+                char choice;
+                cout<<"View image? (y/n):";
+                cin>> choice;
+                if(choice == 'y'|| choice == 'Y')
+                {
+                    found->openImage();
+                }
+            }
+        }
     }
 }
 }
+        
+
+    
 
 Tracker::~Tracker(){
 for(int i=0; i< count; i++)
