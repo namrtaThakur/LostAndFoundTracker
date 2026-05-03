@@ -1,8 +1,8 @@
 #include "LostItem.h"
 using namespace std;
 
-LostItem::LostItem(string n, string loc, string date,string imgPath),
-: Item(n,loc,imagePath),lostDate(date){}
+LostItem::LostItem(string n, string loc, string date,string imgPath)
+: Item(n,loc,imagePath), lostDate(date){}
 
 void LostItem:: display() const
 {
