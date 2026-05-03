@@ -9,7 +9,6 @@ std::string Utils::toLower(const std::string &str) {
 
     } return result;
 
-} bool Utils::isEqualIgnoreCase(const
-std::string& a, const std::string& b){
-    return toLower(a) == to Lower(b);
+} bool Utils::isEqualIgnoreCase(const std::string& a, const std::string& b){
+    return toLower(a) == toLower(b);
 }
