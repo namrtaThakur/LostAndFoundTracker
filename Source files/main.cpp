@@ -39,7 +39,7 @@ int main()
 
             tracker.addItem(new LostItem(name, location, date, imagePath));
 
-            // 🔥 Call matching immediately
+            
             LostItem temp(name, location, date, imagePath);
             tracker.findMatches(temp);
         }
