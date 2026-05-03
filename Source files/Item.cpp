@@ -37,6 +37,6 @@ void Item::openImage() const
 }
 else 
 {
-    cout<<"No image available. \n"
+    cout<<"No image available. \n";
 }
 }
