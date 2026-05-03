@@ -15,6 +15,6 @@ else
 cout<<",No image Provide";
 cout << endl;
 }
-string FoundItem::getFoundDate() const{
+std ::string FoundItem::getFoundDate() const{
     return foundDate;
 }
