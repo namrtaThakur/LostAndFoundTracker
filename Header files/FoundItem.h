@@ -1,13 +1,12 @@
 #ifndef FOUNDITEM_H
-#define FOUNDITEM H
+#define FOUNDITEM_H
 
 #include "Item.h"
-#include<string>
-
+#include <string>
 #include <iostream>
 
 
-class FoundItem :public Item{
+class FoundItem : public Item{
 private:
  std::string foundDate;
 
