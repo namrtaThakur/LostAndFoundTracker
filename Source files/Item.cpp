@@ -16,8 +16,8 @@ string Item::getLocation()const{
     return location;
 }
 
-void Item::setImagePath(const string& path)
-{imagePath = path;
+void Item::setImagePath(const string& path){
+    imagePath = path;
 }
 
 string Item::getImagePath() const{
@@ -32,11 +32,10 @@ void Item::openImage() const
 {
     if (!imagePath.empty())
 {
-    string command = "start\"\"\"" + imagePath + "\"";
-    system(command.c_str());
+    cout<<"Opening image: "<< imagePath << endl;
 }
 else 
 {
-    cout<<"No image available. \n";
+    cout<<"No image available. \n"<<endl;
 }
 }
