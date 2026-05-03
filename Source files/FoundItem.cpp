@@ -2,9 +2,10 @@
 using namespace std;
 
 FoundItem::FoundItem(string n, string loc, string date, string imgPath)
- :Item(n, loc),foundDate(date){}
+ :Item(n, loc,imgPath),
+ foundDate(date){}
 
-void FoundItem:: display() const{
+void FoundItem::display() const{
  cout <<"Found Item:"<< name <<",Location:"<< location;
 if(!foundDate.empty())
  cout << ",Date:"<< foundDate;
@@ -12,9 +13,9 @@ if(!foundDate.empty())
  if(!imagePath.empty())
 cout<<",Image:"<< imagePath;
 else
-cout<<",No image Provide";
+cout<<",No image Provided";
 cout << endl;
 }
-std ::string FoundItem::getFoundDate() const{
+string FoundItem::getFoundDate() const{
     return foundDate;
 }
