@@ -115,6 +115,7 @@ int main()
         }
 
     } while (choice != 6);
+}
 
      catch (const exception& e) {
         cout << "Error: " << e.what() << endl;
@@ -122,5 +123,4 @@ int main()
 
 
     return 0;
-}
 }
