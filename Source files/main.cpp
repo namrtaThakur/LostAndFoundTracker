@@ -7,7 +7,7 @@ using namespace std;
 
 int main()
 {
-    Tracker tracker;
+    try {Tracker tracker;
     int choice;
 
     do {
@@ -20,13 +20,23 @@ int main()
         cout << "6. Exit\n";
         cout << "Enter your choice: ";
         cin >> choice;
-        cin.ignore(); // IMPORTANT
+        if (cin.fail()){
+            cin.clear();
+            cin.ignore(1000,'\n');
+            throw runtime_error ("Invalid input! Please enter a number.");
+        }
+        cin.ignore(); 
 
         if (choice == 1) {
             string name, location, date, imagePath;
 
             cout << "Enter item name: ";
             getline(cin, name);
+
+             if (name.empty()) {
+                    throw invalid_argument("Item name cannot be empty.");
+                }
+
 
             cout << "Enter location: ";
             getline(cin, location);
@@ -49,6 +59,10 @@ int main()
 
             cout << "Enter item name: ";
             getline(cin, name);
+
+             if (name.empty()) {
+                    throw invalid_argument("Item name cannot be empty.");
+                }
 
             cout << "Enter location: ";
             getline(cin, location);
@@ -101,6 +115,11 @@ int main()
         }
 
     } while (choice != 6);
+
+     catch (const exception& e) {
+        cout << "Error: " << e.what() << endl;
+    }
+
 
     return 0;
 }
