@@ -39,3 +39,25 @@ else
     cout<<"No image available. \n"<<endl;
 }
 }
+bool Item::operator==(const Item& other) const
+{
+    return (name == other.name &&
+            location == other.location &&
+            imagePath == other.imagePath);
+}
+bool Item::operator<(const Item& other) const
+{
+    return name < other.name;
+}
+ostream& operator<<(ostream& os, const Item& item)
+{
+    os << "Name: " << item.name << "\n"
+       << "Location: " << item.location << "\n";
+
+    if (!item.imagePath.empty())
+        os << "Image: " << item.imagePath << "\n";
+    else
+        os << "Image: None\n";
+
+    return os;
+}
