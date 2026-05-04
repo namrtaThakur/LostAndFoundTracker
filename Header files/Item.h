@@ -26,7 +26,7 @@ bool hasImage() const;
 void openImage() const;
 
 bool operator==(const Item& other) const;
-bool operator<(const Item& other) const;
+
 
 friend ostream& operator<<(ostream& os, const Item& item);
 

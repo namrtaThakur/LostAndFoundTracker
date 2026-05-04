@@ -45,10 +45,7 @@ bool Item::operator==(const Item& other) const
             location == other.location &&
             imagePath == other.imagePath);
 }
-bool Item::operator<(const Item& other) const
-{
-    return name < other.name;
-}
+
 ostream& operator<<(ostream& os, const Item& item)
 {
     os << "Name: " << item.name << "\n"
